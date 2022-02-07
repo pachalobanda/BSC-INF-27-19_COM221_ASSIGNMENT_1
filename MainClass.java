@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+        
 public class MainClass{
     public static void main(String[] args){
 
@@ -10,56 +10,65 @@ public class MainClass{
 
     Scanner input = new Scanner(System.in);
 
+    LoanAccount loanacc [] = new LoanAccount[8];
+     //  int NumAccount = 0;
+
     LoanManagementSystem Loan = new LoanManagementSystem();
 
     StudentD stud = new StudentD();
- 
-        System.out.println("      SELECT YOUR CHOICE");
-        System.out.println("     ----------***-------");
-        System.out.println("1. Undergraduate");
-        System.out.println("2. Postgraduate");
+     
+    int choice3;
+
+    
+       Loan.Display1();
         int choice = input.nextInt();
         if (choice == 1){
             Loan.Display();
-            int choice1 = input.nextInt();
+            int choic = input.nextInt();
+            if (choice == 1){
+                Loan.MenuAccount();
+                int choicee = input.nextInt();
         
-    if (choice == 1){
+   if (choice == 1){
         StudentD student = new StudentD();
         System.out.println("Enter Your Name:");
-        String n = input.next();
-        student.setName(n);
+        String name = input.next();
+        student.setName(name);
         System.out.println("Enter Year Of Study:");
-        int y = input.nextInt();
-        student.setYearOfStudy(y);
+        int year = input.nextInt();
+        student.setYearOfStudy(year);
         System.out.println("Enter Name Of Programe:");
-        String p = input.next();
-        student.setNameOfPrograme(p);
+        String programe = input.next();
+        student.setNameOfPrograme(programe);
         System.out.println("Enter subsitence amount");
-        double subsidence = input.nextDouble();
+        double subsistence = input.nextDouble();
         System.out.println("Enter stationay amount");
         double statioanay = input.nextDouble();
-
-        String account = "UG"+number1+number2+number3;
-System.out.println("............YOUR ACCOUNT DETAILS..........." );
-System.out.println("");
-System.out.println("name       year   program       loan ammount    Account number");
-System.out.println("-------------------------------------------------------------------------");
-System.out.println(Name+" "+"   "+YearOfStudy+" "+NameOfPrograme+"   "+(stud.getInterestRate()* Subsistence+ Subsistence)+"      "+account);
-
-System.out.println("..............PLACE YOUR CHOICE.............");
-System.out.println("1. Check your account balance");
-System.out.println("2. Create another account");
-System.out.println("3. payback");
-int choice2 = input.nextInt();
+    
+        String Account = "UG"+number1+number2+number3;
+        System.out.println("............YOUR ACCOUNT DETAILS..........." );
+        System.out.println("");
+        System.out.println("Name          Year    Program      Loan Amount      Account Number");
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println(name+"   "+"    "+year+"       "+programe+"        "+(stud.getInterestRate()* subsistence+ subsistence)+"           "+Account);
+        Loan.Display2();
+        int choice2 = input.nextInt();
+        
 if(choice2 ==1){
-    System.out.println("your account balance is "+(stud.getInterestRate()* Subsistence+ Subsistence));
+    System.out.println("your account balance is "+(stud.getInterestRate()* subsistence+ subsistence));
+   /* else  (choice==2){
+        StudentD studen = new StudentD();
+        System.out.println("Enter Your Name:");
+        String nam = input.next();
+        student.setName(nam);
+}
+**/
 }
 else if(choice2==2){
-    
+   
 }
+   }
   }
-
-    }
-
+}
     }
 }

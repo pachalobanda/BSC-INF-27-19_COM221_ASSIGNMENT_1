@@ -5,18 +5,16 @@ public class StudentD{
     private int YearOfStudy;
     private String NameOfPrograme;
     private double Subsistence;
-    private double Stationary;
 
 public StudentD(){
 }
-public StudentD(double InterestRate, double LoanAmount, String Name, int YearOfStudy, String NameOfPrograme, double Subsistence, double Stationary){
+public StudentD(double InterestRate, double LoanAmount, String Name, int YearOfStudy, String NameOfPrograme, double Subsistence){
     this.InterestRate = InterestRate;
     this.LoanAmount = LoanAmount;
     this.Name = Name;
     this.YearOfStudy= YearOfStudy;
     this.NameOfPrograme = NameOfPrograme;
     this.Subsistence = Subsistence;
-    this.Stationary = Stationary;
 
 }
 class Undergraduate extends StudentD {
@@ -29,14 +27,8 @@ class Undergraduate extends StudentD {
        super();
     
     }
-    public Undergraduate ( double InterestRate, double StuInterestRate,  double LoanAmount, String Name, String YearOfStudy, String NameOfPrograme ){
-    //super( InterestRate, LoanAmount, Name, YearOfStudy, NameOfPrograme, Subsistence);
-    /*this.InterestRate = InterestRate;
-    this.LoanAmount = LoanAmount;
-    this.Name = Name;
-    this.YearOfStudy = YearOfStudy;
-    this.NameOfPrograme = NameOfPrograme;
-    this.Subsistence = Subsistence;**/
+    public Undergraduate (double Stationary, double StuInterestRate, double InterestRate, double LoanAmount, String Name, int YearOfStudy, String NameOfPrograme, double Subsistence){
+    super( InterestRate, LoanAmount, Name, YearOfStudy, NameOfPrograme, Subsistence);
     this.Stationary = Stationary;
     this.StuInterestRate = StuInterestRate;
     
@@ -55,7 +47,29 @@ class Undergraduate extends StudentD {
     }
     
     }
-
+    class Postgraduate extends StudentD{
+        double ResearchGrant = 6.6;
+        
+        
+        public Postgraduate(){
+        super();
+        }
+        public Postgraduate ( double ResearchGrant, double InterestRate, double LoanAmount, String Name, int YearOfStudy,String NameOfPrograme, double Subsistence){
+        super( InterestRate, LoanAmount, Name, YearOfStudy, NameOfPrograme, Subsistence);
+        
+        this.ResearchGrant = ResearchGrant;
+        
+        }
+        
+        public double getResearchGrant(){
+            return ResearchGrant;
+        
+        }
+        public void setResearchGrant(double ResearchGrant){
+            this.ResearchGrant = ResearchGrant;
+        }
+        
+        }
 
 public void setInterestRate(double InterestRate){
     this.InterestRate = InterestRate;
@@ -90,13 +104,5 @@ public String getNameOfPrograme(){
 public void setSubsistence(double Subsistence){
     this.Subsistence = Subsistence;
 }
-public double getSubsistence(){
-    return Subsistence;
-}
-public void setStationary(double Stationary){
-    this.Stationary = Stationary;
-}
-public double getStationary(){
-    return Stationary;
-}
+
 }
