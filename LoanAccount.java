@@ -92,6 +92,4 @@ public void setBalance(double Balance){
 //}
 
 
-
-//public abstract void deposit(double amount);
 }

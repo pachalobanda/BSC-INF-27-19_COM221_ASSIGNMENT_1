@@ -2,8 +2,8 @@
     public void Display1(){
         System.out.println("      SELECT YOUR CHOICE");
         System.out.println("     ----------***-------");
-        System.out.println("1. Undergraduate");
-        System.out.println("2. Postgraduate");
+        System.out.println("1. UnderGraduate");
+        System.out.println("2. PostGraduate");
      }
     public void Display(){
         System.out.println("WELCOME TO LOAN MANAGEMENT SYSTEM:");

@@ -22,9 +22,21 @@ public class MainClass{
     
        Loan.Display1();
         int choice = input.nextInt();
+           
         if (choice == 1){
             Loan.Display();
             int choic = input.nextInt();
+         do {
+            System.out.print("Enter Choice: ");
+            choice3 = input.nextInt();
+
+        }while(choice3 < 1 || choice3 > 4);
+            
+        
+        
+      /*  if (choice == 1){
+            Loan.Display();
+            int choic = input.nextInt();**/
             if (choice == 1){
                 Loan.MenuAccount();
                 int choicee = input.nextInt();
@@ -54,21 +66,14 @@ public class MainClass{
         Loan.Display2();
         int choice2 = input.nextInt();
         
-if(choice2 ==1){
+if(choice2 == 1){
     System.out.println("your account balance is "+(stud.getInterestRate()* subsistence+ subsistence));
-   /* else  (choice==2){
-        StudentD studen = new StudentD();
-        System.out.println("Enter Your Name:");
-        String nam = input.next();
-        student.setName(nam);
+}else if(choice == 2){
+    
 }
-**/
-}
-else if(choice2==2){
-   
+
 }
    }
   }
 }
-    }
 }
