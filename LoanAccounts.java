@@ -8,11 +8,11 @@ public class LoanAccounts {
     private double LoanAmount;
     private double Balance;
 
-    //adding an empty constructor LoanAccounts
+    //adding constructor of LoanAccounts without parameters
     LoanAccounts(){
         
     }
-    //a constructor
+    // constructor
     LoanAccounts(double Balance,double LoanAmount){
         this.Balance=Balance;
         this.LoanAmount=LoanAmount;
