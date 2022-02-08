@@ -1,39 +1,61 @@
- class LoanManagementSystem{
-    public void Display1(){
-        System.out.println("      SELECT YOUR CHOICE");
-        System.out.println("     ----------***-------");
-        System.out.println("1. UnderGraduate");
-        System.out.println("2. PostGraduate");
-     }
-    public void Display(){
-        System.out.println("WELCOME TO LOAN MANAGEMENT SYSTEM:");
-        System.out.println("---**--------**-------**-----**---");
+import java.util.Scanner;
+public class LoanManagementSystem {
+    public static void main(String[] args) {
+        while(true) {
+        Scanner input = new Scanner(System.in);
+         LoanAccounts disp = new LoanAccounts();
+         int choice3;
+       
+       disp.Display();
+       int choice = input.nextInt();
+       do {
+        System.out.print("Enter Choice: ");
+        choice3 = input.nextInt();
+
+    }while(choice3 < 1 || choice3 > 3);
         
-        System.out.println("     MAIN MENU");
-        System.out.println(" ~~~~~~~~~~~~~~~~~");
-        System.out.println("1. Create an Account:");
-        System.out.println("2. Apply for the Loan");
-        System.out.println("3. Check Balance");
-        System.out.println("4. Exit");
 
-        /*do {
-            System.out.print("Enter Choice: ");
-            choice3 = input.nextInt();
+        if (choice == 1) {
+            System.out.println("Enter Your Name:");
+         
+            String name = input.next();
+            disp.setname(name);
+            
+            System.out.println("Enter Name Of Programe:");
+            String program = input.next();
+            disp.setprogram(program);
 
-        }while(choice3 < 1 || choice3 > 4);
-        return choice3;**/
+            System.out.println("Enter Year Of Study:");
+            int year = input.nextInt();
+            disp.setyear(year);
+            System.out.println("Name: " + disp.getname() + " Year: " + disp.getyear() + " Program: " + disp.getprogram());
+
+            System.out.println("Choose Whether You Are An Undergraduate Or a Postgraduate");
+            System.out.println("1.Postgraduate");
+            System.out.println("2.Undergraduate");
+            int option = input.nextInt();
+            Postgraduate p=new Postgraduate();
+            if(option==1){
+                p.postgraduate();
+            }
+            else if(option==2){
+                Undergraduate ud=new Undergraduate();
+                ud.undergraduate();
+            }
+            else{
+                System.out.println("Select The Right Option:");
+            }
+            
+        }
+        else if (choice == 2) {
+
+        }
+        else if (choice == 3) {
+            System.exit(0);
+        }
+        else {
+            System.out.println(" Invalid Option ");
+        }
     }
-    public void MenuAccount(){
-        System.out.println("SELECT ACCOUNT TYPE:");
-        System.out.println("1. Loan Account");
-        System.out.println("2. Student Account");
-
-    }
-    public void Display2(){ 
-        System.out.println("..............PLACE YOUR CHOICE.............");
-
-        System.out.println("1. Check your account balance");
-        System.out.println("2. Create another account");
-        System.out.println("3. payback");
     }
 }
