@@ -2,65 +2,67 @@
 //a class called LoanAccounts
 public class LoanAccounts {
     //
-    private String name;
-    private String program;
-    private int year;
-    private double loanAmount;
-    private double balance;
+    private String Name;
+    private String Program;
+    private int Year;
+    private double LoanAmount;
+    private double Balance;
+
     //adding an empty constructor LoanAccounts
     LoanAccounts(){
+        
     }
     //a constructor
-    LoanAccounts(double balance,double loanAmount){
-        this.balance=balance;
-        this.loanAmount=loanAmount;
+    LoanAccounts(double Balance,double LoanAmount){
+        this.Balance=Balance;
+        this.LoanAmount=LoanAmount;
        
     }
     //another constructor    
-    LoanAccounts(String name, String program, int year,double loanAmount,double balance){
-        this.name = name;
-        this.program = program;
-        this.year = year;
-        this.loanAmount=loanAmount;
-        this.balance=balance;
+    LoanAccounts(String Name, String Program, int Year,double LoanAmount,double Balance){
+        this.Name = Name;
+        this.Program = Program;
+        this.Year = Year;
+        this.LoanAmount=LoanAmount;
+        this.Balance=Balance;
     }
     //setting a name
-    public void setname(String name){
-        this.name =name;
+    public void setName(String Name){
+        this.Name =Name;
     }
     //getting a name
-    public String getname(){
-        return name;
+    public String getName(){
+        return Name;
     }
     //setting a program
-    public void setprogram(String program){
-        this.program = program;
+    public void setProgram(String Program){
+        this.Program = Program;
     }
     //getting a program
-    public String getprogram(){
-        return program;
+    public String getProgram(){
+        return Program;
     }
     //setting a year
-    public void setyear(int year){
-        this.year = year;
+    public void setYear(int Year){
+        this.Year = Year;
     }
     //getting a year
-    public int getyear(){
-        return year;
+    public int getYear(){
+        return Year;
     }
     
-    public void setloanAmount(double loanAmount){
-        this.loanAmount = loanAmount;
+    public void setLoanAmount(double LoanAmount){
+        this.LoanAmount = LoanAmount;
     }
-    public double getloanAmount(){
-        return loanAmount;
+    public double getLoanAmount(){
+        return LoanAmount;
     }
 
-    public void setbalance(double amount){
-        balance=balance-amount;
+    public void setBalance(double Amount){
+        Balance=Balance-Amount;
     }
-    public double getbalance(){
-        return balance;
+    public double getBalance(){
+        return Balance;
     }
     //displaying the first page/opening page
     public void Display() {
@@ -68,9 +70,9 @@ public class LoanAccounts {
         System.out.println("---**--------**-------**-----**---");
         System.out.println("     MAIN MENU");
         System.out.println(" ~~~~~~~~~~~~~~~~~");
-        System.out.println("1. Create an Account:");
-        System.out.println("2.Sign in");
-        System.out.println("3.Sign out");
+        System.out.println("1. Create a New Account:");
+        System.out.println("2.Log in");
+        System.out.println("3.Log out");
     }
 
 }

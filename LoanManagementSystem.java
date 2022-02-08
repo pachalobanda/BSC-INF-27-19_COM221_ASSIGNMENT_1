@@ -3,10 +3,10 @@ public class LoanManagementSystem {
     public static void main(String[] args) {
         while(true) {
         Scanner input = new Scanner(System.in);
-         LoanAccounts disp = new LoanAccounts();
+         LoanAccounts loan = new LoanAccounts();
          int choice3;
        
-       disp.Display();
+       loan.Display();
        int choice = input.nextInt();
        do {
         System.out.print("Enter Choice: ");
@@ -18,29 +18,29 @@ public class LoanManagementSystem {
         if (choice == 1) {
             System.out.println("Enter Your Name:");
          
-            String name = input.next();
-            disp.setname(name);
+            String Name = input.next();
+            loan.setName(Name);
             
             System.out.println("Enter Name Of Programe:");
-            String program = input.next();
-            disp.setprogram(program);
+            String Program = input.next();
+            loan.setProgram(Program);
 
             System.out.println("Enter Year Of Study:");
-            int year = input.nextInt();
-            disp.setyear(year);
-            System.out.println("Name: " + disp.getname() + " Year: " + disp.getyear() + " Program: " + disp.getprogram());
+            int Year = input.nextInt();
+            loan.setYear(Year);
+            System.out.println("Name: " + loan.getName() + " Year: " + loan.getYear() + " Program: " + loan.getProgram());
 
             System.out.println("Choose Whether You Are An Undergraduate Or a Postgraduate");
             System.out.println("1.Postgraduate");
             System.out.println("2.Undergraduate");
             int option = input.nextInt();
-            Postgraduate p=new Postgraduate();
+            Postgraduate post=new Postgraduate();
             if(option==1){
-                p.postgraduate();
+                post.postgraduate();
             }
             else if(option==2){
-                Undergraduate ud=new Undergraduate();
-                ud.undergraduate();
+                Undergraduate under=new Undergraduate();
+                under.undergraduate();
             }
             else{
                 System.out.println("Select The Right Option:");
